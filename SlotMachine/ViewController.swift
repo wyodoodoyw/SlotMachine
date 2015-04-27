@@ -205,35 +205,35 @@ class ViewController: UIViewController {
         
         // betOneButton
         self.betOneButton = UIButton()
-        self.betOneButton.setTitle("Bet One", forState: UIControlState.Normal)      // could change title for different state (ex. selected, highlighted)
+        self.betOneButton.setTitle("Bet One", forState: UIControlState.Normal)
         self.betOneButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-        self.betOneButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)   // ? because may or may not exist
-        self.betOneButton.backgroundColor = UIColor.lightGrayColor()
+        self.betOneButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        self.betOneButton.backgroundColor = UIColor.greenColor()
         self.betOneButton.sizeToFit()
         self.betOneButton.center = CGPoint(x: containerView.frame.width * kEighth * 3, y: containerView.frame.height * kHalf)
-        self.betOneButton.addTarget(self, action: "betOneButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)    // one colon says there is one parameter
+        self.betOneButton.addTarget(self, action: "betOneButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(self.betOneButton)
 
         // betMaxButton
         self.betMaxButton = UIButton()
-        self.betMaxButton.setTitle("Bet Max", forState: UIControlState.Normal)      // could change title for different state (ex. selected, highlighted)
+        self.betMaxButton.setTitle("Bet Max", forState: UIControlState.Normal)
         self.betMaxButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-        self.betMaxButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)   // ? because may or may not exist
-        self.betMaxButton.backgroundColor = UIColor.lightGrayColor()
+        self.betMaxButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        self.betMaxButton.backgroundColor = UIColor.redColor()
         self.betMaxButton.sizeToFit()
         self.betMaxButton.center = CGPoint(x: containerView.frame.width * kEighth * 5, y: containerView.frame.height * kHalf)
-        self.betMaxButton.addTarget(self, action: "betMaxButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)    // one colon says there is one parameter
+        self.betMaxButton.addTarget(self, action: "betMaxButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(self.betMaxButton)
         
         // spinButton
         self.spinButton = UIButton()
-        self.spinButton.setTitle("Spin", forState: UIControlState.Normal)      // could change title for different state (ex. selected, highlighted)
+        self.spinButton.setTitle("Spin", forState: UIControlState.Normal)
         self.spinButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-        self.spinButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)   // ? because may or may not exist
-        self.spinButton.backgroundColor = UIColor.lightGrayColor()
+        self.spinButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        self.spinButton.backgroundColor = UIColor.greenColor()
         self.spinButton.sizeToFit()
         self.spinButton.center = CGPoint(x: containerView.frame.width * kEighth * 7, y: containerView.frame.height * kHalf)
-        self.spinButton.addTarget(self, action: "spinButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)    // one colon says there is one parameter
+        self.spinButton.addTarget(self, action: "spinButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(self.spinButton)
     }
 
