@@ -72,9 +72,32 @@ class ViewController: UIViewController {
     }
     
     func betOneButtonPressed (button: UIButton) {
+        if credits <= 0 {
+            showAlertWithText(header: "No More Credits", message: "Reset Game")
+        } else {
+            if currentBet < 5 {
+                currentBet += 1
+                credits -= 1
+                updateMainView()
+            } else {
+                showAlertWithText(message: "You can only bet 5 credits at a time")
+            }
+        }
     }
     
     func betMaxButtonPressed (button: UIButton) {
+        if credits <= 5 {
+            showAlertWithText(header: "Not Enough Credits", message: "Bet Less")
+        } else {
+            if currentBet < 5 {
+                var creditsToBetMax = 5 - currentBet
+                credits -= creditsToBetMax
+                currentBet += creditsToBetMax
+                updateMainView()
+            } else {
+                showAlertWithText(message: "You can only bet 5 credits at a time.")
+            }
+        }
     }
     
     func spinButtonPressed (button: UIButton) {
@@ -284,6 +307,16 @@ class ViewController: UIViewController {
         self.creditsLabel.text = "\(credits)"
         self.betLabel.text = "\(currentBet)"
         self.winnerPaidLabel.text = "\(winnings)"
+    }
+    
+    func showAlertWithText (header : String = "Warning", message : String) {
+        // modular, so easy to create many different alerts in the future
+        
+        var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        // allows user to dismiss alert
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        // shows the alert
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
 }

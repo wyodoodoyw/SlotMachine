@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4815C3FD1AEFBCA1008474F2 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4815C3FC1AEFBCA1008474F2 /* Factory.swift */; };
+		4875C6E71AF0502800691ADD /* SlotBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875C6E61AF0502800691ADD /* SlotBrain.swift */; };
 		48BF26DE1AEE5C440045244C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BF26DD1AEE5C440045244C /* AppDelegate.swift */; };
 		48BF26E01AEE5C440045244C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BF26DF1AEE5C440045244C /* ViewController.swift */; };
 		48BF26E31AEE5C440045244C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BF26E11AEE5C440045244C /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		4815C3FC1AEFBCA1008474F2 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		4875C6E61AF0502800691ADD /* SlotBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotBrain.swift; sourceTree = "<group>"; };
 		48BF26D81AEE5C440045244C /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BF26DC1AEE5C440045244C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48BF26DD1AEE5C440045244C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				48BF26DD1AEE5C440045244C /* AppDelegate.swift */,
 				48BF26DF1AEE5C440045244C /* ViewController.swift */,
 				4815C3FC1AEFBCA1008474F2 /* Factory.swift */,
+				4875C6E61AF0502800691ADD /* SlotBrain.swift */,
 				48BF26FD1AEE8B0D0045244C /* Slot.swift */,
 				48BF26E11AEE5C440045244C /* Main.storyboard */,
 				48BF26E41AEE5C440045244C /* Images.xcassets */,
@@ -222,6 +225,7 @@
 				48BF26E01AEE5C440045244C /* ViewController.swift in Sources */,
 				48BF26FE1AEE8B0D0045244C /* Slot.swift in Sources */,
 				48BF26DE1AEE5C440045244C /* AppDelegate.swift in Sources */,
+				4875C6E71AF0502800691ADD /* SlotBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
