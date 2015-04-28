@@ -33,6 +33,11 @@ class ViewController: UIViewController {
     
     var slots:[[Slot]] = []
     
+    // stats
+    var credits = 0
+    var currentBet = 0
+    var winnings = 0
+    
     // constants
     let kMarginForView: CGFloat = 10.0      // k specifies that this value is a constant
     let kMarginForSlot: CGFloat = 2.0
@@ -49,9 +54,10 @@ class ViewController: UIViewController {
         
         setupContainerViews()
         setupFirstContainer(firstContainer)
-        setupSecondContainer(secondContainer)
+        //setupSecondContainer(secondContainer) <-- taken care of in hardReset()
         setupThirdContainer(thirdContainer)
         setupFourthContainer(fourthContainer)
+        hardReset()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,20 +68,16 @@ class ViewController: UIViewController {
     // IBActions
     
     func resetButtonPressed (button: UIButton) {
-        println("resetButtonPressed")
+        hardReset()
     }
     
     func betOneButtonPressed (button: UIButton) {
-        println("betOneButtonPressed")
     }
     
     func betMaxButtonPressed (button: UIButton) {
-        println("betMaxButtonPressed")
     }
     
     func spinButtonPressed (button: UIButton) {
-        println("spinButtonPressed")
-        
         removeSlotImageViews()
         
         // override old array of slots, create new array
@@ -266,6 +268,15 @@ class ViewController: UIViewController {
                 view.removeFromSuperview()
             }
         }
+    }
+    
+    func hardReset () {
+        removeSlotImageViews()
+        slots.removeAll(keepCapacity: true)
+        self.setupSecondContainer(secondContainer)
+        credits = 50
+        winnings = 0
+        currentBet = 0
     }
 
 }
