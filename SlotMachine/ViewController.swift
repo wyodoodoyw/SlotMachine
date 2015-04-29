@@ -108,6 +108,11 @@ class ViewController: UIViewController {
         // update secondContainer
         setupSecondContainer(self.secondContainer)
         
+        var winningsMultiplier = SlotBrain.computeWinnings(slots)
+        winnings = winningsMultiplier * currentBet
+        credits += winnings
+        currentBet = 0
+        updateMainView()
     }
     // setupContainerViews
     
